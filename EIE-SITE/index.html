@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IPPLN-EIE – Energia e Instalações Elétricas</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/logo.png" alt="Logo IPPLN-EIE" style="height: 40px; margin-right: 10px;">
+      <span>IPPLN-EIE</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navMenu" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#professores">Professores</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ranking">Ranking</a></li>
+        <li class="nav-item"><a class="nav-link" href="#horarios">Horários</a></li>
+        <li class="nav-item"><a class="nav-link" href="#noticias">Notícias</a></li>
+        <li class="nav-item"><a class="nav-link" href="#arquivo">Arquivo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pautas">Pautas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#comunidade">Comunidade</a></li>
+        <li class="nav-item"><a class="nav-link" href="#provas">Provas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#biblioteca">Biblioteca</a></li>
+        <li class="nav-item"><a class="nav-link" href="#centro-formacao">Formação</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="hero-text">
+      <h1>Energia e Instalações Elétricas</h1>
+      <p>O curso que forma os técnicos do futuro para Angola!</p>
+      <a href="#sobre" class="btn btn-primary">Saber Mais</a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section bg-light">
+    <div class="container">
+      <h2>Apresentação do Curso</h2>
+      <p>O curso de <strong>Energia e Instalações Elétricas</strong> do IPPLN-EIE capacita os estudantes a projetar, instalar e manter sistemas elétricos industriais, residenciais e de energias renováveis. Tem como objetivo formar profissionais qualificados para atuar no mercado de trabalho com segurança, eficiência e domínio tecnológico.</p>
+      <div class="coordenador mt-5">
+        <div class="row align-items-center">
+          <div class="col-md-3">
+            <img src="images/coordenador.jpg" class="img-fluid rounded-circle" alt="Coordenador">
+          </div>
+          <div class="col-md-9">
+            <h3>Eng. Fernando J. Ngungui</h3>
+            <p>Coordenador do curso, Engenheiro Eletricista com experiência em projetos industriais, automação и docência técnica. Dedica-se a formar profissionais com visão inovadora para o setor energético angolano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSORES -->
+  <section id="professores" class="section">
+    <div class="container">
+      <h2>Professores</h2>
+      <div id="carouselProfessores" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="prof-card text-center">
+              <img src="images/professores/prof1.jpg" alt="Prof João" class="prof-img rounded-circle mx-auto">
+              <h3>Dr. João Silva</h3>
+              <p class="prof-cargo">Chefe de Departamento</p>
+              <button class="btn btn-primary mt-2" onclick="abrirModalProfessor('Dr. João Silva', 'Chefe de Departamento', 'images/professores/prof1.jpg', 'Doutor em Engenharia Elétrica pela UAN, apaixonado por sistemas de potência e energias renováveis. Possui vasta experiência em pesquisa e docência.')">Ver Biografia</button>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="prof-card text-center">
+              <img src="images/professores/prof2.jpg" alt="Prof Maria" class="prof-img rounded-circle mx-auto">
+              <h3>Eng. Maria Sousa</h3>
+              <p class="prof-cargo">Especialista em Automação</p>
+              <button class="btn btn-primary mt-2" onclick="abrirModalProfessor('Eng. Maria Sousa', 'Especialista em Automação', 'images/professores/prof2.jpg', 'Mestre em Sistemas Industriais, atua no desenvolvimento de sistemas automatizados e é entusiasta da Indústria 4.0 aplicada à realidade angolana.')">Ver Biografia</button>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="prof-card text-center">
+              <img src="images/professores/prof3.jpg" alt="Prof Pedro" class="prof-img rounded-circle mx-auto">
+              <h3>Eng. Pedro Fernandes</h3>
+              <p class="prof-cargo">Eletrónica e Energias Renováveis</p>
+              <button class="btn btn-primary mt-2" onclick="abrirModalProfessor('Eng. Pedro Fernandes', 'Eletrónica e Energias Renováveis', 'images/professores/prof3.jpg', 'Técnico Superior com experiência em projetos fotovoltaicos e circuitos eletrônicos. Apaixonado por tecnologia e educação prática.')">Ver Biografia</button>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselProfessores" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselProfessores" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RANKING TRIMESTRAL -->
+  <section id="ranking" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">Ranking Trimestral</h2>
+      <p class="text-center">Melhores alunos por turma e trimestre.</p>
+
+      <!-- Filtros -->
+      <div class="text-center mb-4">
+        <select id="filtroTurma" class="form-control d-inline w-auto mx-2" onchange="filtrarRanking()">
+          <option value="todos">Todas as turmas</option>
+          <option value="10ªC">10ªC</option>
+          <option value="11ªC">11ªC</option>
+          <option value="12ªD">12ªD</option>
+        </select>
+        <select id="filtroTrimestre" class="form-control d-inline w-auto mx-2" onchange="filtrarRanking()">
+          <option value="todos">Todos os trimestres</option>
+          <option value="1º Trimestre">1º Trimestre</option>
+          <option value="2º Trimestre">2º Trimestre</option>
+        </select>
+        <button onclick="exportarPDF()" class="btn btn-outline-primary ml-2"><i class="fas fa-file-pdf"></i> Exportar PDF</button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered text-center align-middle" id="tabelaRanking">
+          <thead class="thead-dark">
+            <tr>
+              <th>Foto</th>
+              <th>Nome</th>
+              <th>Turma</th>
+              <th>Média</th>
+              <th>Trimestre</th>
+              <th>Classificação</th>
+              <th>Detalhes</th>
+            </tr>
+          </thead>
+          <tbody id="corpoRanking">
+            <tr data-turma="10ªC" data-trimestre="1º Trimestre">
+              <td><img src="images/alunos/aluno.jpg" class="rounded-circle" width="60" height="60" alt="Paulo António"></td>
+              <td>Paulo António</td>
+              <td>10ªC</td>
+              <td>18.4</td>
+              <td>1º Trimestre</td>
+              <td>1º</td>
+              <td><button class="btn btn-sm btn-info" onclick="abrirModalAluno('Paulo António', '10ªC', 18.4, '1º Trimestre')">Ver</button></td>
+            </tr>
+            <tr data-turma="12ªD" data-trimestre="1º Trimestre">
+              <td><img src="images/alunos/aluno2.jpg" class="rounded-circle" width="60" height="60" alt="Joana Manuel"></td>
+              <td>Joana Manuel</td>
+              <td>12ªD</td>
+              <td>17.9</td>
+              <td>1º Trimestre</td>
+              <td>2º</td>
+              <td><button class="btn btn-sm btn-info" onclick="abrirModalAluno('Joana Manuel', '12ªD', 17.9, '1º Trimestre')">Ver</button></td>
+            </tr>
+            <tr data-turma="10ªC" data-trimestre="2º Trimestre">
+              <td><img src="images/alunos/aluno3.jpg" class="rounded-circle" width="60" height="60" alt="Carlos Alberto"></td>
+              <td>Carlos Alberto</td>
+              <td>10ªC</td>
+              <td>17.5</td>
+              <td>2º Trimestre</td>
+              <td>1º</td>
+              <td><button class="btn btn-sm btn-info" onclick="abrirModalAluno('Carlos Alberto', '10ªC', 17.5, '2º Trimestre')">Ver</button></td>
+            </tr>
+            <tr data-turma="11ªC" data-trimestre="1º Trimestre">
+              <td><img src="images/alunos/aluno4.jpg" class="rounded-circle" width="60" height="60" alt="Ana Silva"></td>
+              <td>Ana Silva</td>
+              <td>11ªC</td>
+              <td>17.2</td>
+              <td>1º Trimestre</td>
+              <td>1º</td>
+              <td><button class="btn btn-sm btn-info" onclick="abrirModalAluno('Ana Silva', '11ªC', 17.2, '1º Trimestre')">Ver</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORÁRIOS -->
+  <section id="horarios" class="section bg-light">
+    <div class="container text-center">
+      <h2>Horários</h2>
+      <div class="horario-resumo" data-toggle="modal" data-target="#modalHorario">
+        Clique para ver os horários e disciplinas
+      </div>
+    </div>
+
+    <!-- MODAL HORÁRIOS -->
+    <div class="modal fade" id="modalHorario" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Horários e Disciplinas</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselHorarios" class="carousel slide" data-ride="carousel" data-interval="5000">
+              <div class="carousel-inner">
+
+                <!-- 10ª Classe -->
+                <div class="carousel-item active bg-turma10 text-white p-4 rounded">
+                  <h5>10ª Classe</h5>
+                  <p><strong>Turma 10ª C</strong> – Turnos: Manhã e Tarde</p>
+                  <p><strong>Turma 10ª D</strong> – Turnos: Manhã e Tarde</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-tools"></i> POL (Plano de Organização do Trabalho)</li>
+                    <li><i class="fas fa-cogs"></i> ME (Máquinas e Equipamentos)</li>
+                    <li><i class="fas fa-bolt"></i> Electricidade</li>
+                    <li><i class="fas fa-plug"></i> Instalações Eléctricas</li>
+                    <li><i class="fas fa-drafting-compass"></i> Desenho Técnico</li>
+                    <li><i class="fas fa-microchip"></i> Tecnologia Eléctrica</li>
+                    <li><i class="fas fa-square-root-alt"></i> Matemática</li>
+                  </ul>
+                </div>
+
+                <!-- 11ª Classe -->
+                <div class="carousel-item bg-turma11 text-white p-4 rounded">
+                  <h5>11ª Classe</h5>
+                  <p><strong>Turma 11ª C</strong> – Turno: Tarde</p>
+                  <p><strong>Turma 11ª D</strong> – Turno: Tarde</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-building"></i> OGEI (Organização e Gestão de Empresas Industriais)</li>
+                    <li><i class="fas fa-lightbulb"></i> Empreendedorismo</li>
+                    <li><i class="fas fa-industry"></i> FAII (Fabricação e Aplicação de Instalações Industriais)</li>
+                    <li><i class="fas fa-bolt"></i> Electricidade</li>
+                    <li><i class="fas fa-vials"></i> Química</li>
+                    <li><i class="fas fa-atom"></i> Física</li>
+                    <li><i class="fas fa-square-root-alt"></i> Matemática</li>
+                  </ul>
+                </div>
+
+                <!-- 12ª Classe -->
+                <div class="carousel-item bg-turma12 text-white p-4 rounded">
+                  <h5>12ª Classe</h5>
+                  <p><strong>Turma 12ª C</strong> – Turno: Manhã</p>
+                  <p><strong>Turma 12ª D</strong> – Turno: Manhã</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-bolt"></i> Electricidade</li>
+                    <li><i class="fas fa-plug"></i> Instalações Eléctricas</li>
+                    <li><i class="fas fa-drafting-compass"></i> Desenho Técnico</li>
+                    <li><i class="fas fa-project-diagram"></i> Projecto Tecnológico</li>
+                    <li><i class="fas fa-atom"></i> Física</li>
+                    <li><i class="fas fa-square-root-alt"></i> Matemática</li>
+                  </ul>
+                </div>
+
+                <!-- 13ª Classe -->
+                <div class="carousel-item bg-turma13 text-white p-4 rounded">
+                  <h5>13ª Classe</h5>
+                  <p><strong>Turma 13ª C</strong> – Estágio Profissional e Defesa</p>
+                  <p><strong>Turma 13ª D</strong> – Estágio Profissional e Defesa</p>
+                  <p>Sem disciplinas fixas em horário escolar. Os alunos realizam atividades práticas em empresas e preparam a defesa do Projeto Tecnológico.</p>
+                </div>
+
+              </div>
+              <a class="carousel-control-prev" href="#carouselHorarios" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselHorarios" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTÍCIAS -->
+  <section id="noticias" class="section">
+    <div class="container">
+      <h2>Notícias</h2>
+      <div id="carouselNoticias" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="card noticia-card" onclick="abrirModalNoticia('Workshop em Instalações Elétricas', 'images/noticias/not1.jpg', 'Alunos participaram de workshop prático com profissionais da área. O evento contou com demonstrações de instalações elétricas residenciais e industriais, com ênfase em normas de segurança e eficiência energética.')">
+              <img src="images/noticias/not1.jpg" class="card-img-top" alt="Notícia 1">
+              <div class="card-body">
+                <h5 class="card-title">Workshop em Instalações Elétricas</h5>
+                <p class="card-text">Alunos participaram de workshop prático...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card noticia-card" onclick="abrirModalNoticia('Nova Sala de Automação', 'images/noticias/not2.jpg', 'Inauguração da sala com equipamentos modernos de automação industrial. O espaço conta com CLPs, interfaces homem-máquina, inversores de frequência e demais equipamentos de última geração para o aprendizado prático dos alunos.')">
+              <img src="images/noticias/not2.jpg" class="card-img-top" alt="Notícia 2">
+              <div class="card-body">
+                <h5 class="card-title">Nova Sala de Automação</h5>
+                <p class="card-text">Inauguração da sala com equipamentos...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card noticia-card" onclick="abrirModalNoticia('Visita Técnica ao Porto', 'images/noticias/not3.jpg', 'Alunos fizeram visita técnica ao sistema elétrico do porto de Namibe. A visita incluiu a subestação elétrica principal, sistema de iluminação e automação dos guindastes, proporcionando aos estudantes contato com aplicações reais dos conceitos aprendidos em sala.')">
+              <img src="images/noticias/not3.jpg" class="card-img-top" alt="Notícia 3">
+              <div class="card-body">
+                <h5 class="card-title">Visita Técnica ao Porto</h5>
+                <p class="card-text">Alunos fizeram visita técnica...</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselNoticias" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselNoticias" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARQUIVO HISTÓRICO -->
+  <section id="arquivo" class="section bg-light">
+    <div class="container">
+      <h2>Arquivo Histórico</h2>
+      <p>Eventos marcantes e memórias do curso ao longo dos anos.</p>
+      <div id="carouselArquivo" class="carousel slide" data-ride="carousel" data-interval="6000">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="card noticia-card" onclick="abrirModalArquivo('Formatura 2019', 'images/arquivo/formatura2019.jpg', 'A turma finalizou com sucesso a formação, totalizando 36 técnicos prontos para o mercado. A cerimônia contou com a presença de autoridades locais, empresários do setor elétrico e familiares dos formandos.')">
+              <img src="images/arquivo/formatura2019.jpg" class="card-img-top" alt="Formatura 2019">
+              <div class="card-body">
+                <h5 class="card-title">Formatura 2019</h5>
+                <p class="card-text">Encerramento oficial do curso para os finalistas...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card noticia-card" onclick="abrirModalArquivo('Workshop 2018', 'images/arquivo/evento2018.jpg', 'Evento técnico com apresentação de protótipos de instalações e painéis fotovoltaicos. Os projetos apresentados incluíam um sistema de energia solar para bombeamento de água e uma maquete de automação residencial.')">
+              <img src="images/arquivo/evento2018.jpg" class="card-img-top" alt="Workshop 2018">
+              <div class="card-body">
+                <h5 class="card-title">Workshop 2018</h5>
+                <p class="card-text">Apresentação de projetos em tecnologia elétrica...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card noticia-card" onclick="abrirModalArquivo('Semana Técnica 2017', 'images/arquivo/semanatec2017.jpg', 'Debates, palestras e práticas voltadas para inovação e carreira técnica. O evento trouxe profissionais de empresas do setor elétrico para compartilhar experiências e tendências do mercado com os alunos.')">
+              <img src="images/arquivo/semanatec2017.jpg" class="card-img-top" alt="Semana Técnica 2017">
+              <div class="card-body">
+                <h5 class="card-title">Semana Técnica 2017</h5>
+                <p class="card-text">Troca de conhecimento entre alunos e docentes...</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselArquivo" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselArquivo" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAUTAS -->
+  <section id="pautas" class="section bg-light">
+    <div class="container text-center">
+      <h2>Pautas</h2>
+      <p>Área exclusiva para consulta de pautas. Em breve com login e password.</p>
+      <button class="btn btn-primary" onclick="alert('Sistema em desenvolvimento. Em breve disponível para alunos e encarregados de educação.')">Iniciar Sessão</button>
+    </div>
+  </section>
+
+  <!-- COMUNIDADE -->
+  <section id="comunidade" class="container py-5">
+    <h2 class="text-center mb-4">Comunidade</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalComunidade('Evento Cultural', 'https://via.placeholder.com/400x250', 'Alunos participam de atividades culturais no campus, promovendo integração e desenvolvimento de habilidades sociais e criativas.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Evento Comunidade">
+          <div class="card-body">
+            <h5 class="card-title">Evento Cultural</h5>
+            <p class="card-text">Alunos participam de atividades culturais no campus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalComunidade('Feira de Ciências', 'https://via.placeholder.com/400x250', 'Exposição de projetos de alunos e professores, demonstrando aplicações práticas dos conhecimentos adquiridos em sala de aula.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Atividade Comunidade">
+          <div class="card-body">
+            <h5 class="card-title">Feira de Ciências</h5>
+            <p class="card-text">Exposição de projetos de alunos e professores.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalComunidade('Ação Social', 'https://via.placeholder.com/400x250', 'Campanhas comunitárias organizadas pela escola, envolvendo alunos em projetos de responsabilidade social e cidadania.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Ação Social">
+          <div class="card-body">
+            <h5 class="card-title">Ação Social</h5>
+            <p class="card-text">Campanhas comunitárias organizadas pela escola.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROVAS E EXAMES -->
+  <section id="provas" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Provas e Exames</h2>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action" onclick="abrirModalProva('Prova de Matemática - 10ª Classe', '12/09/2025', 'Prova de Matemática para alunos da 10ª Classe, abrangendo conteúdos de álgebra, geometria e trigonometria aplicada.')">10ª Classe - Prova de Matemática - 12/09/2025</li>
+        <li class="list-group-item list-group-item-action" onclick="abrirModalProva('Exame de Física - 11ª Classe', '14/09/2025', 'Exame de Física para alunos da 11ª Classe, com foco em eletricidade, magnetismo e circuitos elétricos.')">11ª Classe - Exame de Física - 14/09/2025</li>
+        <li class="list-group-item list-group-item-action" onclick="abrirModalProva('Prova de Tecnologia Elétrica - 12ª Classe', '16/09/2025', 'Prova de Tecnologia Elétrica para alunos da 12ª Classe, abordando instalações elétricas, normas técnicas e projetos.')">12ª Classe - Prova de Tecnologia Elétrica - 16/09/2025</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="container py-5">
+    <h2 class="text-center mb-4">Projetos</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalProjeto('Automação Residencial', 'https://via.placeholder.com/400x250', 'Sistema inteligente desenvolvido por alunos do 12º ano, permitindo controle remoto de iluminação, climatização e segurança residencial.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projeto 1">
+          <div class="card-body">
+            <h5 class="card-title">Automação Residencial</h5>
+            <p class="card-text">Sistema inteligente desenvolvido por alunos do 12º ano.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalProjeto('Energia Solar', 'https://via.placeholder.com/400x250', 'Painel solar portátil criado como projeto final de curso, capaz de gerar energia suficiente para alimentar pequenos dispositivos e sistemas de iluminação.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projeto 2">
+          <div class="card-body">
+            <h5 class="card-title">Energia Solar</h5>
+            <p class="card-text">Painel solar portátil criado como projeto final de curso.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalProjeto('Robótica', 'https://via.placeholder.com/400x250', 'Protótipo robótico para inspeção de redes elétricas, desenvolvido para identificar falhas e realizar manutenção preventiva em instalações de média tensão.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Projeto 3">
+          <div class="card-body">
+            <h5 class="card-title">Robótica</h5>
+            <p class="card-text">Protótipo robótico para inspeção de redes elétricas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIBLIOTECA -->
+  <section id="biblioteca" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Biblioteca</h2>
+      <div class="row">
+    <div class="col-md-3">
+  <div class="card shadow-sm noticia-card" onclick="abrirModalBiblioteca('Eletricidade Básica', 'images/biblioteca/eletricidade-basica.jpg', 'Livro introdutório...', 'pdfs/eletricidade-basica.pdf')">
+    <img src="images/biblioteca/eletricidade-basica.jpg" class="card-img-top" alt="Livro 1">
+    <div class="card-body">
+      <h6 class="card-title">Eletricidade Básica</h6>
+      <p class="card-text">Autor: João Silva</p>
+      <a href="pdfs/eletricidade-basica.pdf" class="btn btn-outline-primary btn-block mt-2" download>
+        <i class="fas fa-file-pdf"></i> Baixar Manual (PDF)
+      </a>
+    </div>
+  </div>
+</div>
+   <div class="col-md-3">
+  <div class="card shadow-sm noticia-card" onclick="abrirModalBiblioteca('Eletricidade Básica', 'images/biblioteca/eletricidade-basica.jpg', 'Livro introdutório...', 'pdfs/eletricidade-basica.pdf')">
+    <img src="images/biblioteca/eletricidade-basica.jpg" class="card-img-top" alt="Livro 1">
+    <div class="card-body">
+      <h6 class="card-title">Eletricidade Básica</h6>
+      <p class="card-text">Autor: João Silva</p>
+      <a href="pdfs/eletricidade-basica.pdf" class="btn btn-outline-primary btn-block mt-2" download>
+        <i class="fas fa-file-pdf"></i> Baixar Manual (PDF)
+      </a>
+    </div>
+  </div>
+</div>
+
+   <div class="col-md-3">
+  <div class="card shadow-sm noticia-card" onclick="abrirModalBiblioteca('Eletricidade Básica', 'images/biblioteca/eletricidade-basica.jpg', 'Livro introdutório...', 'pdfs/eletricidade-basica.pdf')">
+    <img src="images/biblioteca/eletricidade-basica.jpg" class="card-img-top" alt="Livro 1">
+    <div class="card-body">
+      <h6 class="card-title">Eletricidade Básica</h6>
+      <p class="card-text">Autor: João Silva</p>
+      <a href="pdfs/eletricidade-basica.pdf" class="btn btn-outline-primary btn-block mt-2" download>
+        <i class="fas fa-file-pdf"></i> Baixar Manual (PDF)
+      </a>
+    </div>
+  </div>
+</div>
+        
+  </section>
+
+  <!-- CENTRO DE FORMAÇÃO -->
+  <section id="centro-formacao" class="container py-5">
+    <h2 class="text-center mb-4">Centro de Formação</h2>
+    <p class="text-center">Oferecemos cursos e workshops complementares para capacitação profissional nas áreas de energia e instalações elétricas.</p>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalFormacao('Curso de Energias Renováveis', 'https://via.placeholder.com/400x250', 'Aprenda sobre geração de energia solar, eólica e hidráulica. Curso prático com enfoque em dimensionamento, instalação e manutenção de sistemas de energias renováveis.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Curso 1">
+          <div class="card-body">
+            <h5 class="card-title">Curso de Energias Renováveis</h5>
+            <p class="card-text">Aprenda sobre geração de energia solar, eólica e hidráulica.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalFormacao('Manutenção Elétrica', 'https://via.placeholder.com/400x250', 'Treinamento prático em manutenção de sistemas elétricos, abordando diagnóstico de falhas, reparação e prevenção de acidentes em instalações elétricas.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Curso 2">
+          <div class="card-body">
+            <h5 class="card-title">Manutenção Elétrica</h5>
+            <p class="card-text">Treinamento prático em manutenção de sistemas elétricos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm noticia-card" onclick="abrirModalFormacao('Automação Industrial', 'https://via.placeholder.com/400x250', 'Domine sistemas de automação e controle industrial. Curso completo com CLPs, sensores, atuadores e interfaces homem-máquina para aplicações industriais.')">
+          <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Curso 3">
+          <div class="card-body">
+            <h5 class="card-title">Automação Industrial</h5>
+            <p class="card-text">Domine sistemas de automação e controle industrial.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form id="form-contacto">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" id="nome" class="form-control" placeholder="Nome" required>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="email" id="email" class="form-control" placeholder="Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea id="mensagem" class="form-control" rows="4" placeholder="Mensagem" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- INFRAESTRUTURA -->
+  <section id="infra" class="section bg-light">
+    <div class="container text-center">
+      <h2>Infraestrutura Técnica</h2>
+      <div class="row">
+        <div class="col-md-6 infra-box">
+          <i class="fas fa-cogs fa-3x"></i>
+          <p>Painéis de Formação</p>
+        </div>
+        <div class="col-md-6 infra-box">
+          <i class="fas fa-charging-station fa-3x"></i>
+          <p>Geradores e Instalações</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer mt-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3 text-center text-md-left mb-4 mb-md-0">
+          <img src="images/logo.png" alt="Logo IPPLN-EIE" style="height: 40px; filter: brightness(0) invert(1);">
+          <h5 class="mt-2">IPPLN-EIE</h5>
+          <p class="small">Energia e Instalações Elétricas</p>
+        </div>
+        <div class="col-md-3 text-center text-md-left mb-4 mb-md-0">
+          <h6>Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#professores">Professores</a></li>
+            <li><a href="#ranking">Ranking</a></li>
+            <li><a href="#horarios">Horários</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 text-center text-md-left mb-4 mb-md-0">
+          <h6>Contacto</h6>
+          <p class="small mb-1"><i class="fas fa-map-marker-alt"></i> Saco-Mar, Moçâmedes - Namibe, Angola</p>
+          <p class="small mb-1"><i class="fas fa-phone"></i> (+244) 222-333-444</p>
+          <p class="small mb-1"><i class="fas fa-envelope"></i> info@ippln-eie.ao</p>
+        </div>
+        <div class="col-md-3 text-center text-md-left">
+          <h6>Siga-nos</h6>
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.6927439602043!2d12.142465776440885!3d-15.193557759981236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bb63bdc31f36c35%3A0x517a491bb9b6427d!2sSaco%20Mar%2C%20Mo%C3%A7%C3%A2medes%2C%20Angola!5e0!3m2!1spt-PT!2sao!4v1700000000000!5m2!1spt-PT!2sao"
+            width="100%"
+            height="250"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <p class="mb-0 small">© 2025 IPPLN-EIE. Todos os direitos reservados.</p>
+      </div>
+      <div class="text-center mt-2">
+        <p class="mb-0 small">Desenvolvido com ❤️ para a educação técnica em Angola</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAIS -->
+  <!-- MODAL PROFESSOR -->
+  <div class="modal fade" id="modalProfessor" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="profNome"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="profImg" src="" alt="Foto do Professor" class="rounded-circle mb-3" style="width: 150px;">
+          <p id="profCargo" class="font-weight-bold"></p>
+          <p id="profBio"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ALUNO -->
+  <div class="modal fade" id="modalAluno" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Detalhes do Aluno</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Nome:</strong> <span id="modalNome"></span></p>
+          <p><strong>Turma:</strong> <span id="modalTurma"></span></p>
+          <p><strong>Média:</strong> <span id="modalMedia"></span></p>
+          <p><strong>Trimestre:</strong> <span id="modalTrimestre"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL NOTICIA -->
+  <div class="modal fade" id="modalNoticia" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="noticiaTitulo"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img id="noticiaImagem" src="" class="img-fluid mb-3" alt="Imagem Notícia">
+          <p id="noticiaTexto"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ARQUIVO -->
+  <div class="modal fade" id="modalArquivo" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="arquivoTitulo"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img id="arquivoImagem" src="" class="img-fluid mb-3" alt="Imagem Arquivo Histórico">
+          <p id="arquivoTexto"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL COMUNIDADE -->
+  <div class="modal fade" id="modalComunidade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="comunidadeTitulo"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img id="comunidadeImagem" src="" class="img-fluid mb-3" alt="Imagem Comunidade">
+          <p id="comunidadeTexto"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PROVAS E EXAMES -->
+  <div class="modal fade" id="modalProva" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="provaTitulo"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Data:</strong> <span id="provaData"></span></p>
+          <p id="provaDescricao"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL PROJETOS -->
+  <div class="modal fade" id="modalProjeto" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projetoTitulo"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img id="projetoImagem" src="" class="img-fluid mb-3" alt="Imagem Projeto">
+          <p id="projetoTexto"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL BIBLIOTECA -->
+  <div class="modal fade" id="modalBiblioteca" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bibliotecaTitulo"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+      
+          <img id="bibliotecaImagem" src="" class="img-fluid mb-3" alt="Imagem Biblioteca">
+          <p id="bibliotecaTexto"></p>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- MODAL CENTRO DE FORMAÇÃO -->
+  <div class="modal fade" id="modalFormacao" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formacaoTitulo"></h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <img id="formacaoImagem" src="" class="img-fluid mb-3" alt="Imagem Formação">
+          <p id="formacaoTexto"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
